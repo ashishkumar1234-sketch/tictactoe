@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #7b2ff7, #4facfe);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://img.freepik.com/premium-vector/tic-tac-toe-game-linear-outline-icon-colour-neon-style-brick-wall-background-light-icon_549897-1770.jpg?w=2000");
+  background-size:cover;
+  background-position: center;
+ 
+}
+
+/* Card */
+.container {
+  /*background: #01260e;*/
+
+  padding: 30px 25px;
+  border-radius: 16px;
+  width: 330px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #000;
+}
+
+/* Board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 85px);
+  grid-template-rows: repeat(3, 85px);
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Cell */
+.cell {
+  background: #ffffff;
+  border-radius: 10px;
+  border: 2px solid #e5e7eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cell:hover {
+  background: #f1f5f9;
+}
+
+/* Restart Button */
+button {
+  background: #22c55e;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  
+}
+
+button:hover {
+  background: #16a34a;
+}
+
+/* Winning Message */
+.winning-message {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color:black;
+  min-height: 22px;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 500px) {
+  .container {
+    width: 280px;
+  }
+
+  .board {
+    grid-template-columns: repeat(3, 75px);
+    grid-template-rows: repeat(3, 75px);
+    gap: 10px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
